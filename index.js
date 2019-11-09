@@ -68,12 +68,12 @@ const getHTMLBlockImages = () => {
     return document.getElementsByClassName('block-images')[0];
 }
 
-const onScroll = e => {
+const onScroll = () => {
     imagesScaledOnScroll.forEach(x => x.update());
-    updateTriggerPosition();
+    updateTriggerRenderedPosition();
 }
 
-const updateTriggerPosition = () => {
+const updateTriggerRenderedPosition = () => {
     const trigger = document.getElementsByClassName('trigger')[0];
     const windowCenterYRelative = window.scrollY + (window.innerHeight / 2);
     trigger.setAttribute('value', `ScrollY: ${window.scrollY} --- ScrollY + 1/2: ${windowCenterYRelative}`);
