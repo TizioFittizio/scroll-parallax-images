@@ -36,7 +36,10 @@ body {
     background-color: red;
 }
 
-.trigger::before {
-    content: 'trigger';
+.trigger::after {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
     color: red;
+    content: attr(value);
 }
